@@ -1,0 +1,13 @@
+{% extends "data.html" %}
+
+
+{%block content%} 
+<form method="POST">
+    <ul>
+{% for stranka in stranky %}
+    <li class="web"><button type="submit" name="button" value="{{stranka}}">{{stranka}}</button></li>
+        
+{% endfor %}
+    </ul>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "data.html" %}
+
+
+{%block content%} 
+<form method="POST">
+    <ul>
+{% for stranka in stranky %}
+    <li class="web"><button type="submit" name="button" value="{{stranka}}">{{stranka}}</button></li>
+        {%if hodnota == stranka%}
+        <ul>
+            <button type="submit" name="Upload" value="{{stranka}}">Upload</button>
+
+            {% for soubor in soubory %}
+
+                {% if("." in soubor)%} 
+                    <li> 
+                        <button value="{{stranka}}/{{soubor}}" class="mainInformation">{{soubor}}</button>
+                        <button type="submit" name="deleteFile" value="{{stranka}}/{{soubor}}">Delete</button>
+                        <button type="submit" name="rename" value="{{stranka}}/{{soubor}}">Rename</button>
+                    </li>
+                {% else %}
+                <li class="folder">
+                    <button type="submit" name="openFolder" value="{{stranka}}/{{soubor}}" class="mainInformation">{{soubor}}</button>
+                    <button type="submit" name="deleteFolder" value="{{stranka}}/{{soubor}}">Delete</button>
+                    <button type="submit" name="rename" value="{{stranka}}/{{soubor}}">Rename</button>
+                </li>
+                {% endif %}
+
+            {% endfor %}
+            <button type="submit" name="addFolder" value="{{stranka}}/{{soubor}}">Add folder</button>
+        </ul>
+        {%endif%}
+{% endfor %}
+    </ul>
+</form>
+{% endblock %}

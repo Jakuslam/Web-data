@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+
+{%block content%} 
+<form method="POST">
+    
+    <div>
+        <label for="Email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter username"/>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password"/>
+    </div>
+
+    <br>
+    <button type="submit">Login</button>
+</form>
+
+{% endblock %}

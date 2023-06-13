@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(19, 11, 107);
+    color: rgb(255, 255, 255);
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+.folder{ 
+    list-style-image: url(img/folder.png); 
+
+}
+
+.web{ 
+    list-style-image: url(img/sever.png); 
+}
+
+.web button{ 
+    font-size: 30px;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 5%;
+    font-size: 40px;
+}
+
+li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+button{
+    background-color: rgb(31, 31, 148);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: all 0.2s;
+
+}
+
+.mainInformation{
+    font-size: 25px;
+}
+
+.mainInformation:hover{
+    padding: 0.5%;
+}
+
+button:hover{
+    background-color: rgb(63, 63, 199); 
+
+}
+
+ul{
+    padding-left: 2%;
+}
+
+img{
+    padding-right: 1%;
+}
+
+.back{
+    background-color: rgb(38, 38, 114); 
+
+}
+  
